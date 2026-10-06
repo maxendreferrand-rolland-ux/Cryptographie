@@ -21,7 +21,6 @@ def aplatir(listeImbrique):
 
     try:
         len(premier)
-
         return aplatir_sans_isinstance(premier) + aplatir_sans_isinstance(reste)
 
     except TypeError:
