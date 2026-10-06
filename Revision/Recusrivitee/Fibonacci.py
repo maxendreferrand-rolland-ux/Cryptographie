@@ -1,7 +1,9 @@
-def fibonacci(a,seuil):
-    if a >= seuil:
+def fibonacci(a):
+    if a <= 1:
         return a
     else :
-        return fibonacci(a+(a-1),seuil)
+        return fibonacci(a-1) + fibonacci(a-2)
 
-print(fibonacci(1,9))
+
+for i in range(10):
+    print(fibonacci(i))
