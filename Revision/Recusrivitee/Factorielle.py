@@ -4,5 +4,4 @@ def Factorielle(n):
     else :
         return n* Factorielle(n-1)
 
-
 print(Factorielle(5))
