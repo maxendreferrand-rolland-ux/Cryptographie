@@ -1,0 +1,14 @@
+def vige(alp, message_chiffre, cle):
+    message_decripte = ""
+    i = 0
+    for lettre in message_chiffre:
+        indice = (alp.index(lettre) - alp.index(cle[i % len(cle)])) % len(alp)
+        message_decripte += alp[indice]
+        i += 1
+    return message_decripte
+
+
+alp = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "]
+message_chiffre = "S FWWOJGORJSOBGWYKBODQNJMOSPJSCOWIYYBGWYUOJPZK BJXZOIVJCAPIPKXG"
+cle = "KPOXJK"
+print(vige(alp, message_chiffre, cle))
