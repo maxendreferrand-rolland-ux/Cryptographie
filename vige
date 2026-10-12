@@ -1,0 +1,18 @@
+def vige(alp, mess, cle):
+    cle.upper()
+    mess.upper()
+    message_decripte = ""
+    i = 0
+    for lettre in mess:
+        indice = (alp.index(lettre) + alp.index(cle[i % len(cle)])) % len(alp)
+        message_decripte += alp[indice]
+        i += 1
+    return message_decripte
+
+
+alp = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "]
+message_chiffre_ex = "S FWWOJGORJSOBGWYKBODQNJMOSPJSCOWIYYBGWYUOJPZK BJXZOIVJCAPIPKXG"
+cle_ex = "KPOXJK"
+mess = str(input("entrez un message à coder : "))
+cle  = str(input("entrez une cle : "))
+print(vige(alp, mess, cle))
